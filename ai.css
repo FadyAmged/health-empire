@@ -1,0 +1,151 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BUTTON ================= */
+#ai-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-mid-visa);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* ================= MODAL ================= */
+.chat-modal {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  height: 420px;
+
+  background: var(--section-bg-hover);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+
+  /* مهم للـ drag */
+  left: auto;
+  top: auto;
+}
+
+.chat-modal.active {
+  display: flex;
+}
+
+/* ================= HEADER ================= */
+.chat-header {
+  background: var(--primary-mid-visa);
+  color: var(--accent);
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: grab;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ================= MESSAGES ================= */
+#messages {
+  flex: 1;
+  padding: 10px;
+
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Scroll bar */
+#messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+/* ================= MESSAGE ================= */
+.msg {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+/* user */
+.user {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  align-self: flex-end;
+}
+
+/* bot */
+.bot {
+  background: var(--primary-dark-visa);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  align-self: flex-start;
+}
+
+/* ================= CLOSE BUTTON ================= */
+#close-chat {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ================= INPUT ================= */
+.input-box {
+  display: flex;
+  background: var(--input-bg);
+  border-top: 1px solid var(--border);
+}
+
+#userInput {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+#sendBtn {
+  background: var(--accent);
+  color: var(--mode);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 500px) {
+  .chat-modal {
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+  }
+}

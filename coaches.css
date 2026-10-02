@@ -1,0 +1,124 @@
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* optional for smooth motion */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg-gradient);
+  background-size: 200% 200%;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.card{
+  width: 18rem;
+  background: var(--section-bg);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+
+.card img{
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  margin-bottom: 15px;
+}
+.card-title{
+  font-size: clamp(18px, 1.8vw, 20px);
+  color: var(--accent);
+}
+
+.card:hover img {
+  transform: scale(1.05); /* zooms in */
+}
+
+.heading{
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 0.5s; /* delay for heading */
+}
+.card-text{
+  font-size: clamp(12px, 1.4vw, 14px);
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+  
+
+.btn-primary {
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    padding: 8px 20px;
+    background-color: var(--accent);
+    align-items: center;
+    justify-content: center;
+    color: var(--mode);
+    border: none;
+    border-radius: 15px;
+    font-size: clamp(16px, 1.6vw, 17px);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-mid);
+  transform: scale(1.03);
+}
+
+.container{
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+  }

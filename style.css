@@ -1,0 +1,297 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  background: var(--section-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px 25px 40px;
+  height: 100px;
+}
+.navbar .logo {
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  transition: var(--transition);
+}
+.logo h3 {
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--highlight));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.nav-logo {
+  width: 60px;
+}
+.logo:hover {
+  transform: scale(1.03);
+}
+.nav-links-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+.nav-link a {
+  color: var(--accent);
+  font-size: clamp(16px, 1.6vw, 17px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+#menu-toggle {
+  font-size: clamp(20px, 2vw, 25px);
+  cursor: pointer;
+  display: none;
+  color: var(--accent);
+}
+#menu-toggle :hover {
+  color: var(--accent-mid);
+  transform: scale(1.2);
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-link {
+  transition: 0.1s;
+}
+.nav-link:hover {
+  transform: scale(1.03);
+}
+.nav-link a:hover {
+  color: var(--highlight);
+}
+.login-button {
+  padding: 10px 35px;
+  background-color: var(--accent);
+  color: var(--mode);
+  border: none;
+  border-radius: 20px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.login-button:hover {
+  background-color: var(--accent-mid);
+  transform: scale(1.03);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--footer-bg);
+  color: var(--mode);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin-top: auto;
+  padding: 30px;
+}
+.contact {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  margin-top: 10px;
+}
+.contact h3 {
+  font-size: clamp(20px, 2.5vw, 25px);
+  margin-left: 5px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#contact-email {
+  background-color: var(--input-bg);
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+}
+#contact-email::placeholder {
+  color: var(--accent-mid);
+  letter-spacing: 1px;
+}
+#contact-message {
+  background-color: var(--input-bg);
+  padding: 12px;
+  width: 100%;
+  height: 190px;
+  resize: none;
+  border: none;
+  border-radius: 15px;
+}
+#contact-message::placeholder {
+  color: var(--accent-mid);
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+#contact-message:focus,
+#contact-email:focus {
+  outline: 1px solid var(--highlight);
+}
+#contact-submit-button {
+  padding: 7px 25px;
+  background: var(--accent-mid);
+  color: var(--mode);
+  border: none;
+  border-radius: 20px;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 600;
+}
+#contact-submit-button:hover {
+  background: var(--accent-light);
+  transform: scale(1.03);
+}
+.contact-alert {
+  width: 100%;
+  text-align: left;
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #e83232;
+  padding-left: 10px;
+}
+.footer-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 10px;
+}
+.footer-link a {
+  color: var(--footer-text);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer-link a:hover {
+  color: var(--text-light);
+}
+.footer-link {
+  transition: 0.1s;
+}
+.footer-link:hover {
+  transform: scale(1.03);
+}
+.footer-content h3 {
+  font-size: clamp(20px, 2.5vw, 25px);
+  color: var(--text-light);
+  font-weight: 600;
+  width: fit-content;
+  transition: 0.2s;
+}
+.footer-content h3:hover {
+  transform: scale(1.03);
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+.social-icon {
+  font-size: clamp(20px, 2vw, 25px);
+  color: var(--text-light);
+  transition: 0.2s;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.footer-content p {
+  color: var(--footer-text);
+  font-size: clamp(12px, 1.2vw, 14px);
+  letter-spacing: 1px;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+  .nav-links.active {
+    right: 0;
+  }
+  #menu-toggle {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    right: -100%;
+    width: 30%;
+    background: var(--section-bg);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 0;
+    transition: 0.3s ease;
+  }
+}
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+  }
+  .contact {
+    width: 85%;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 620px) {
+  .contact {
+    width: 95%;
+  }
+  .logo img {
+    width: 8.3vw;
+  }
+  .login-button {
+    padding: 10px 30px;
+  }
+  .navbar {
+    padding: 20px;
+  }
+  .footer-content p {
+    width: 90%;
+  }
+  .social-icon {
+    font-size: clamp(18px, 2vw, 25px);
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    padding-bottom: 100px;
+  }
+}
